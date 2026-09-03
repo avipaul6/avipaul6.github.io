@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="essay">
+  <a class="back" href="/writing/">← Writing</a>
+  <h1 class="essay-title">{{ page.title }}</h1>
+  <div class="essay-date">{{ page.date | date: "%B %-d, %Y" }}</div>
+
+  {{ content }}
+
+  {% if page.linkedin %}
+  <div class="essay-foot">
+    Originally posted on <a href="{{ page.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>.
+  </div>
+  {% endif %}
+</article>

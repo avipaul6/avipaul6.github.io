@@ -1,1 +1,6 @@
-theme: jekyll-theme-cayman
+title: Avi Paul
+tagline: I build AI agents that do the boring, valuable work.
+description: I lead AI engineering at OFX in Brisbane and build small AI agents for everyday problems.
+author: Avi Paul
+url: https://avipaul.dev
+permalink: /writing/:title/

@@ -1,0 +1,20 @@
+---
+layout: default
+title: Writing — Avi Paul
+description: Notes on building AI agents in public.
+permalink: /writing/
+---
+
+<section>
+  <div class="section-head"><h2>Writing</h2></div>
+  <p class="lede">Notes on building AI agents in public. The wins and the failure modes both.</p>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <span class="post-date">{{ post.date | date: "%b %Y" }}</span>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
