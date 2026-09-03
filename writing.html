@@ -5,15 +5,20 @@ description: Notes on building AI agents in public.
 permalink: /writing/
 ---
 
-<section>
-  <div class="section-head"><h2>Writing</h2></div>
-  <p class="lede">Notes on building AI agents in public. The wins and the failure modes both.</p>
+<header class="hero">
+  <span class="eyebrow label">Writing</span>
+  <h1>Notes on building agents in public.</h1>
+  <p class="lede">The wins and the failure modes both. A running series.</p>
+</header>
 
+<section>
   <ul class="post-list">
     {% for post in site.posts %}
     <li>
-      <span class="post-date">{{ post.date | date: "%b %Y" }}</span>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <a href="{{ post.url | relative_url }}">
+        <span class="post-date">{{ post.date | date: "%b %Y" }}</span>
+        <span class="post-title">{{ post.title }}</span>
+      </a>
     </li>
     {% endfor %}
   </ul>
