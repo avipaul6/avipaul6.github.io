@@ -5,10 +5,11 @@ description: I lead AI engineering at OFX in Brisbane and build small AI agents 
 ---
 
 <header class="hero">
-  <span class="eyebrow label"><span class="dot"></span> Building AI agents · Brisbane, Australia</span>
+  <span class="eyebrow label"><span class="dot"></span> Brisbane, Australia</span>
   <h1>I build AI agents that do the <em>boring, valuable</em> work.</h1>
+  <p class="rotate-line" id="hi">Depending on the day, I'm <span>an AI engineer.</span></p>
   <p class="lede">
-    I lead AI engineering at OFX, building production agents that take on real operational work
+    At OFX I build production agents for the data team, the kind that take on real operational work
     with humans still in the loop. Outside that, I build small agents for everyday problems and put
     them online. <strong>Here are a few of them.</strong>
   </p>
@@ -17,6 +18,33 @@ description: I lead AI engineering at OFX in Brisbane and build small AI agents 
     <a class="link-arrow" href="/writing/">Read the writing →</a>
   </div>
 </header>
+
+<!-- Rotating identity (adapted from Eugene Yan's hero). Edit the phrases below. -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var phrases = [
+      'an AI engineer.',
+      'a data & ML engineer.',
+      'an applied scientist.',
+      'a three-time founder.',
+      'an agent builder.'
+    ];
+    var el = document.querySelector('#hi span');
+    if (!el) return;
+    el.textContent = phrases[0];
+    // Respect users who prefer no motion: show the first phrase, do not rotate.
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var i = 1;
+    setInterval(function () {
+      el.classList.add('fade-out');
+      setTimeout(function () {
+        el.textContent = phrases[i];
+        el.classList.remove('fade-out');
+        i = (i + 1) % phrases.length;
+      }, 450); // matches the CSS opacity transition
+    }, 2400);
+  });
+</script>
 
 <section id="work">
   <div class="label-row">
@@ -30,7 +58,7 @@ description: I lead AI engineering at OFX in Brisbane and build small AI agents 
     <li class="work-item">
       <a href="https://app.duckfleet.dev/" target="_blank" rel="noopener">
         <div class="work-main">
-          <h3 class="work-name">🦆 DuckFleet</h3>
+          <h3 class="work-name">DuckFleet</h3>
           <p class="work-desc">An agent fleet that hunts loyalty points while you sleep. Governed by design: it refuses, asks, and logs before it acts.</p>
         </div>
         <div class="work-meta">
